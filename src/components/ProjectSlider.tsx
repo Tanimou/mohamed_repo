@@ -136,13 +136,7 @@ const ProjectSlider: React.FC = () => {
                         iconcolor={project.colors.icon}
                         onClick={notifyServerRequest}
                       />
-                      <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                      />
+                     
                     </div>
                   </div>
 
@@ -176,13 +170,7 @@ const ProjectSlider: React.FC = () => {
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
                   />
-                  <Button
-                    label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
+               
                 </div>
                 <p className="text-white  max-lg:text-4xl">
                   {language === "DE"
@@ -213,7 +201,7 @@ const ProjectSlider: React.FC = () => {
             ))}
           </div>
         </div>
-        <LiveTicker />
+        
       </section>
       <ReactTooltip
         place="top"

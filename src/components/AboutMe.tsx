@@ -31,8 +31,7 @@ const AboutMe: React.FC = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
-  const paragraphs =
-    language === "DE" ? aboutMeData.paragraphs_DE : aboutMeData.paragraphs_EN;
+  const paragraphs = aboutMeData.paragraphs_EN;
 
   return (
     <React.Fragment>
@@ -79,43 +78,22 @@ const AboutMe: React.FC = () => {
           >
             {paragraphs.map((paragraph, index) => (
               <SwiperSlide
-                className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-10 cursor-grab"
+                className="bg-[--darkblue] text-[--white] flex flex-col justify-center items-center rounded-2xl p-5 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all text-left max-lg:p-5 cursor-grab"
                 key={index}
               >
-                <div className="flex gap-6 flex-row justify-start items-center max-lg:flex-col max-lg:justify-center max-lg:text-center ">
-                  <div>
+                <div className="flex flex-row justify-center items-center max-lg:flex-col max-lg:justify-center max-lg:text-center ">
+                  <div className="flex justify-center">
                     <img
-                      src={paragraph.icon}
+                      src={paragraph.image}
                       alt={paragraph.icon}
-                      className="w-24"
+                      className="w-64"
+                     
                     />
+                    
                   </div>
-                  <div>
-                    <h2>{paragraph.title}</h2>
-                  </div>
+                 
                 </div>
-                <div className="flex flex-row gap-10 max-lg:flex-col">
-                  <div className="flex flex-col gap-4 items-center justify-between -mt-10 -mb-10 max-lg:flex-row max-lg:m-0">
-                    <p className="text-white">
-                      <span className="text-orange">&lt;</span>h3
-                      <span className="text-orange">/&gt;</span>
-                    </p>
-                    <div className="flex justify-between items-center w-1 h-[100%] max-lg:flex-row max-lg:w-[10rem]  max-lg:bg-lightblue">
-                      <div></div>
-                      <div className="w-[0.5rem] bg-[--lightblue] h-[100%] max-lg:w-10  max-lg:bg-lightblue max-lg:h-[0.25rem]"></div>
-                      <div></div>
-                    </div>
-                    <p className="text-white">
-                      <span className="text-orange">&lt;</span>h3
-                      <span className="text-orange">/&gt;</span>
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-white text-4xl">
-                      {paragraph.description}
-                    </p>
-                  </div>
-                </div>
+                
               </SwiperSlide>
             ))}
             <div

@@ -34,6 +34,8 @@ import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+
 import Imprint from "../../components/Imprint";
 import Privacy from "../../components/Privacy";
 
@@ -63,7 +65,7 @@ export const headerIntroData = {
         de: "Meine Projekte",
         en: "My Projects",
       },
-      icon: FiGithub,
+      icon: AiOutlineFundProjectionScreen,
       color: "secondary-btn",
     },
   ],
@@ -174,9 +176,89 @@ export const liveTickerData = {
   },
 } as const;
 
-export const skillsDataWeb = [
+export const skillsDataAnalysis = [
   {
-    skillsTitle: "WebDevelopment",
+    skillsTitle: "Data Analysis",
+    skills: [
+      {
+        title: "HTML",
+        hash: "#html",
+        icon: htmlicon,
+        color: "#F1662A",
+      },
+      {
+        title: "CSS",
+        hash: "#CSS",
+        icon: cssicon,
+        color: "#1572B6",
+      },
+      {
+        title: "JavaScript",
+        hash: "#JavaScript",
+        icon: javascripticon,
+        color: "#F7DF1E",
+      },
+      {
+        title: "TypeScript",
+        hash: "#TypeScript",
+        icon: typescripticon,
+        color: "#007ACC",
+      },
+      {
+        title: "React",
+        hash: "#React",
+        icon: reacticon,
+        color: "#61DAFB",
+      },
+      {
+        title: "Next.js",
+        hash: "#Next.js",
+        icon: [nextjsicon, nextjsiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
+      {
+        title: "Node.js",
+        hash: "#Node.js",
+        icon: nodejsicon,
+        color: "#339933",
+      },
+      {
+        title: "Tailwind",
+        hash: "#Tailwind",
+        icon: tailwindcssicon,
+        color: "#38B2AC",
+      },
+      {
+        title: "MongoDB",
+        hash: "#MongoDB",
+        icon: mongodbicon,
+        color: "#449C45",
+      },
+      {
+        title: "Vue.js",
+        hash: "#Vue.js",
+        icon: vuejsicon,
+        color: "#4FC08D",
+      },
+      {
+        title: "Express",
+        hash: "#Express",
+        icon: [expressicon, expressiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
+      {
+        title: "SASS/SCSS",
+        hash: "#SASS/SCSS",
+        icon: sassscssicon,
+        color: "#CC6699",
+      },
+    ],
+  },
+] as const;
+
+export const skillsDataEngineering = [
+  {
+    skillsTitle: "Data Engineering",
     skills: [
       {
         title: "HTML",
@@ -371,23 +453,16 @@ export const aboutMeData = {
   ],
   paragraphs_EN: [
     {
-      title: "The Circuits of My Heart",
-      description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: hardwareicon,
+     image:"https://th.bing.com/th/id/OIP.k8B9aSEHBPFn8A_U5_d7uwHaFF?rs=1&pid=ImgDetMain",
+     icon:"a cat"
     },
     {
-      title: "On the Fast Lane of Life",
-      description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
+      image:"https://th.bing.com/th/id/OIP.k8B9aSEHBPFn8A_U5_d7uwHaFF?rs=1&pid=ImgDetMain",
+     icon:"a cat"
+
     },
-    {
-      title: "The Joy of Discovery as a Life Motto",
-      description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
-    },
+    //Todo: Add others certifications images
+  
   ],
 };
 
